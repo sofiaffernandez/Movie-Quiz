@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <script href="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="quiz">
+      <h1>Movie Quiz</h1>
+
+      <hr />
+
+      <h2 id="question">
+        "What breed of dog was Marley in the film \"Marley & Me\" (2008)?"
+      </h2>
+      <!-- Aqui desde js vamos colocando las preguntas que tocan -->
+
+      <div id="choices">
+        <button style="--clr: #26a9bb" class="button">
+          Labrador Retriever
+        </button>
+        <button style="--clr: #26a9bb" class="button">Dalmatian</button>
+        <button style="--clr: #26a9bb" class="button">Golden Retriever</button>
+        <button style="--clr: #26a9bb" class="button">Shiba Inu</button>
+      </div>
+
+      <!-- <div id="choices">
+        <button class="button">button</button>
+        <button class="button">button</button>
+        <button class="button">button</button>
+        <button class="button">button</button>
+      </div> -->
+      <!-- Aqui los botones los iremos creando desde js -->
+
+      <hr />
+
+      <footer>
+        <p id="progress">question x of y</p>
+        <!-- Question x of y -->
+      </footer>
+    </div>
+
+    <script type="module" href="script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Rubik Bubbles", cursive, sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* body {
+  background: #436b8d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+body {
+  background-image: url(./items/teste.jpg);
+  background-size: contain;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#quiz {
+  background: #e3f6f5;
+  width: 30rem;
+  padding: 4rem;
+  text-align: center;
+  border-radius: 15px;
+}
+
+h1 {
+  color: #ca381e;
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 2px 0;
+  text-shadow: -2px 2px 1px #000;
+}
+
+#question {
+  font-family: "Roboto Slab", serif, cursive;
+  font-size: 1.7rem;
+  color: #02062b;
+  text-transform: capitalize;
+  /* text-shadow: -2px 2px 1px #000; */
+  /* text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
+    1px -1px 1px #000; */
+}
+
+/* .button {
+  background-color: #34a3a3;
+  color: white;
+  width: 250px;
+  font-size: 20px;
+  border-radius: 0.3rem;
+  padding: 10px 20px;
+  margin: 10px 40px 10px;
+  outline: 0;
+} */
+
+.button {
+  background-color: #34a3a3;
+  color: white;
+  width: 250px;
+  font-size: 20px;
+  border-radius: 0.3rem;
+  padding: 10px 20px;
+  margin: 10px 40px 10px;
+  outline: 0;
+  transition: 0.5s;
+  text-transform: capitalize;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
+    1px -1px 1px #000;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: var(--clr);
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px var(--clr);
+}
+
+/* .button:hover {
+  cursor: pointer;
+  background: #57636e;
+} */
+
+#progress {
+  color: #eee730;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
+    1px -1px 1px #000;
+}
