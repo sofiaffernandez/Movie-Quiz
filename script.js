@@ -1,5 +1,5 @@
 "use strict";
-
+console.log("funciona")
 let points =0;
 let index =0;
 let jsonData;
@@ -9,28 +9,29 @@ let answer1= document.querySelector("#answer1")
 let answer2= document.querySelector("#answer2")
 let answer3= document.querySelector("#answer3")
 let answer4= document.querySelector("#answer4")
+
 function plural(puntos) { 
     return puntos !== 1 ? "s" : "";
 }  
 choices.addEventListener("click", (e) =>{
-if (e.target.matches("button")){
-    e.preventDefault()
-    let answersPlayer = e.target.innerHTML
-    if(answersPlayer === jsonData.correct){
-        points +=1;
+    if (e.target.matches("button")){
+        e.preventDefault()
+        let answersPlayer = e.target.innerHTML
+            if(answersPlayer === jsonData.correct){
+                points +=1;
+            }
+            index ++;
+            if(index < jsonData.lenght){
+                writeQuestion(jsonData[index])
+                writeAnswers(jsonData[index])
+                document.querySelector("#ranking").innerHTML=`Your score is ${points}`;
+                document.querySelector ("#progress").innerHTML=`Question ${index} of ${jsonData.lenght}`;
+            }
+            else if(index --- jsonData.length ){
+                let nombre = prompt ("Registra tu nombre");
+                document.querySelector("#puntos").innerHTML=`${nombre} has obtenido ${points} ${plural}`;
+        } 
     }
-    index ++;
-    if(index < jsonData.lenght){
-        writeQuestion(jsonData[index])
-        writeAnswers (jsonData[index])
-        document.querySelector("#puntuacton").innerHTML=`${points}`;
-        document.querySelector ("#progress").innerHTML=`Question ${index} of ${jsonData.lenght}`;
-    }
-    else if(index --- jsonData.length ){
-        let nombre = prompt ("Registra tu nombre");
-        document.querySelector("#puntos").innerHTML=`${nombre} has obtenido ${points} ${plural}`;
-    } 
-}
 })
 async function loadJSONData (url){
     const response =await fetch (url)
