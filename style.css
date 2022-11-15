@@ -31,7 +31,7 @@ body {
 
 #quiz {
   background: #e3f6f5;
-  width: 30rem;
+  width: 35rem;
   padding: 4rem;
   text-align: center;
   border-radius: 15px;
@@ -81,6 +81,10 @@ h1 {
     1px -1px 1px #000;
 }
 
+:root {
+  --clr: #26a9bb;
+}
+
 .button:hover {
   cursor: pointer;
   background: var(--clr);
@@ -99,4 +103,10 @@ h1 {
   text-transform: capitalize;
   text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000,
     1px -1px 1px #000;
+}
+
+#ranking {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #ca381e;
 }
