@@ -1,5 +1,5 @@
 "use strict";
-console.log("funciona")
+
 let points =0;
 let index =0;
 let jsonData;
@@ -15,30 +15,32 @@ function plural(puntos) {
 }  
 choices.addEventListener("click", (e) =>{
     if (e.target.matches("button")){
-        e.preventDefault()
+        
+        console.log("hiciste click en un botton")
         let answersPlayer = e.target.innerHTML
-            if(answersPlayer === jsonData.correct){
-                points +=1;
-            }
-            index ++;
-            if(index < jsonData.lenght){
+        console.log(answersPlayer)
+            // if(answersPlayer === jsonData.correct){
+            //     points +=1;
+            // }
+            index++;
+            if(index < jsonData.length){
                 writeQuestion(jsonData[index])
                 writeAnswers(jsonData[index])
                 document.querySelector("#ranking").innerHTML=`Your score is ${points}`;
                 document.querySelector ("#progress").innerHTML=`Question ${index} of ${jsonData.lenght}`;
             }
-            else if(index --- jsonData.length ){
+            else if(index === jsonData.length ){
                 let nombre = prompt ("Registra tu nombre");
                 document.querySelector("#puntos").innerHTML=`${nombre} has obtenido ${points} ${plural}`;
         } 
     }
 })
 async function loadJSONData (url){
-    const response =await fetch (url)
-    const data =await response.json()
+    const response = await fetch(url)
+    const data = await response.json()
     return data;
 }
-function writeQuestion(question){
+function writeQuestion(q){
     question.textContent =q.question;
 }
 function writeAnswers(a){
@@ -49,11 +51,12 @@ function writeAnswers(a){
 }
 async function main(){
     try{
-        jsonData= await loadJSONData("/quiz.json")
-        console.log(jsonData)
+        jsonData = await loadJSONData("./quiz.json")
+        
         writeQuestion(jsonData[index])
         writeAnswers(jsonData[index])
     } catch (error) {
+        error = alert("Hubo un error")
         console.error("hubo un error", error.message);
     }
 }
