@@ -92,3 +92,6 @@
 for (let i = 0; i < 4; i++) {
     opciones.sort(() => Math.random() - 0.5);
   }
+  let puntosLocal = localStorage.getItem("nombre, points");
+                puntosLocal.sort((a, b) => (a.puntos < b.puntos ? 1 : -1));
+                document.querySelector("#ranking").innerHTML=`${} `;

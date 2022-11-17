@@ -13,37 +13,30 @@
     <div id="quiz">
       <h1>Movie Quiz</h1>
 
-      <hr />
+      <hr/>
 
-      <h2 id="question">
-        "What breed of dog was Marley in the film \"Marley & Me\" (2008)?"
-      </h2>
-      <!-- Aqui desde js vamos colocando las preguntas que tocan -->
-
+      <h2 id="question"></h2>
+      
+      <div id="puntuacionTotal"></div>
+      <div id="ranking"></div>
+    
       <div id="choices">
-        <button class="button" id="answer1">Labrador Retriever</button>
-        <button class="button" id="answer2">Dalmatian</button>
-        <button class="button" id="answer3">Golden Retriever</button>
-        <button class="button" id="answer4">Shiba Inu</button>
+        <button class="button" id="answer1"></button>
+        <button class="button" id="answer2"></button>
+        <button class="button" id="answer3"></button>
+        <button class="button" id="answer4"></button>
       </div>
 
-      <!-- <div id="choices">
-        <button class="button">button</button>
-        <button class="button">button</button>
-        <button class="button">button</button>
-        <button class="button">button</button>
-      </div> -->
-      <!-- Aqui los botones los iremos creando desde js -->
-
+     
       <hr />
+      <div id="tiempo"></div>
+      <div id="puntuacion">Your score is 0</div>
 
       <footer>
         <p id="progress">Question 1 of 50</p>
-        <!-- Question x of y -->
-      </footer>
-      <div id="ranking">Your score is 0</div>
-    </div>
 
+      </footer>
+    </div>
     <script type="module" src="script.js"></script>
   </body>
 </html>
