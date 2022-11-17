@@ -105,7 +105,7 @@ h1 {
     1px -1px 1px #000;
 }
 
-#ranking {
+#puntuacion, #puntuacionTotal {
   font-size: 20px;
   text-transform: capitalize;
   color: #ca381e;
