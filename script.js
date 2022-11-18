@@ -43,7 +43,7 @@ choices.addEventListener("click", (e) =>{
                 question.style.display = "none";
                 progress.style.display = "none";
                 localStorage.setItem("nombre", JSON.stringify(nombre)); 
-                mostrarRanking()
+                mostrarRanking(points)
             } 
             
         return;
@@ -92,27 +92,42 @@ main()
 //     }
 // },1000)}
 
-function mostrarRanking(){
- if (!window.localStorage);
- try{
-    
-    if (localStorage.getItem("ranking") === null) {
-        let guardarRanking = [];
-        localStorage.setItem("ranking", JSON.stringify(guardarRanking));
-    } else {
-        guardarRanking = JSON.parse(localStorage.getItem("ranking")); 
-    }
-    for (let i = 0; i < 5; i++) {
-        const li = document.createElement("li"); 
-        li.classList.add("nombre"); 
-        if (arrayList[i]) {
-            li.innerHTML = `${arrayList[i][0]} - ${arrayList[i][1]}`; 
-        } else {
-            li.innerHTML = "Vacio";
-        }
+function mostrarRanking(points){
+    if(points > 0 & points <=10)
+    ranking.innerHTML=`<br><img src=gifs/stormtrooper.gif alt=stormtrooper StarWars height=150 aling=middle> <h2  > Un Stormtrooper tiene más puntuería que tú </h2> `;
+    if(points > 11 & points <=20)
+    ranking.innerHTML=`<br><img src=gifs/leonardo-dicaprio.gif alt=DiCaprio Enfadado height=150 aling=middle> <h2 > Has decepcionado a DiCaprio </h2> `;
+    if(points > 21 & points <=30)
+    ranking.innerHTML=`<br><img src=gifs/et.gif alt=et disfrazado height=150 aling=middle> <h2 > Aprobado raspado </h2> `;
+    if(points > 31 & points <=40)
+    ranking.innerHTML=`<br><img src=gifs/magodeoz.gif alt=et disfrazado height=150 aling=middle> <h2 > Sigue por ese camino </h2> `;
+    if(points > 41 & points <50)
+    ranking.innerHTML=`<br><img src=gifs/backtothefuture.gif alt=backtothefuture disfrazado height=150 aling=middle> <h2  > No te lo crees ni tú </h2> `;
+    if(points === 50)
+    ranking.innerHTML=`<br><img src=gifs/tarantino.gif alt=et disfrazado height=150 aling=middle> <h2> Enhorabuena, te gusta más el cine que a Tarantino los pies </h2> `;
 
- }}
- catch(error){ 
-   error = alert("Hubo un error con el LocalStorage, no se puede cargar el Ranking");
 }
-}
+
+//  if (!window.localStorage);
+//  try{
+    
+//     if (localStorage.getItem("ranking") === null) {
+//         let guardarRanking = [];
+//         localStorage.setItem("ranking", JSON.stringify(guardarRanking));
+//     } else {
+//         guardarRanking = JSON.parse(localStorage.getItem("ranking")); 
+//     }
+//     for (let i = 0; i < 5; i++) {
+//         const li = document.createElement("li"); 
+//         li.classList.add("nombre"); 
+//         if (arrayList[i]) {
+//             li.innerHTML = `${arrayList[i][0]} - ${arrayList[i][1]}`; 
+//         } else {
+//             li.innerHTML = "Vacio";
+//         }
+
+//  }}
+//  catch(error){ 
+//    error = alert("Hubo un error con el LocalStorage, no se puede cargar el Ranking");
+// }
+// }
