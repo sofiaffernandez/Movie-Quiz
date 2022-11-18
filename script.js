@@ -66,12 +66,23 @@ function writeAnswers(a){
     answer3.textContent =a.answers[2];
     answer4.textContent =a.answers[3];
 }
+
 //Función principal que hace funcionar el juego. Alerta si hubo un error de carga 
 async function main(){
     try{
         jsonData = await loadJSONData("./quiz.json")
         console.log(jsonData)
-        let index = Math.floor(Math.random() * jsonData.length); // se hacen preguntas aleatorias cada vez que recargas la página
+        //Sacar las preguntas en aleatorio sin repetir;
+            let index;
+            let j;
+            let k;
+            for (index = jsonData.length; index; index--) {
+                j = Math.floor(Math.random() * index);
+                k = jsonData[index - 1];
+                jsonData[index - 1] = jsonData[j];
+                jsonData[j] = k;
+            }
+
         writeQuestion(jsonData[index])
         writeAnswers(jsonData[index])
         correct = jsonData[index].correct
