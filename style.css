@@ -12,14 +12,7 @@ body {
   margin: 0;
 }
 
-/* body {
-  background: #436b8d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
-
+/* body { background: #436b8d; display: flex; justify-content: center; align-items: center; height: 100vh; } */
 body {
   background-image: url(./items/teste.jpg);
   background-size: contain;
