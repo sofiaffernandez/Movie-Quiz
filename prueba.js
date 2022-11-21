@@ -191,3 +191,26 @@ console.log(JSON.parse.recuperarJSON)
 //     }
 //     form.addEventListener("submit", cancelarForm)
 // }
+//  if (!window.localStorage);
+//  try{
+    
+//     if (localStorage.getItem("ranking") === null) {
+//         let guardarRanking = [];
+//         localStorage.setItem("ranking", JSON.stringify(guardarRanking));
+//     } else {
+//         guardarRanking = JSON.parse(localStorage.getItem("ranking")); 
+//     }
+//     for (let i = 0; i < 5; i++) {
+//         const li = document.createElement("li"); 
+//         li.classList.add("nombre"); 
+//         if (arrayList[i]) {
+//             li.innerHTML = `${arrayList[i][0]} - ${arrayList[i][1]}`; 
+//         } else {
+//             li.innerHTML = "Vacio";
+//         }
+
+//  }}
+//  catch(error){ 
+//    error = alert("Hubo un error con el LocalStorage, no se puede cargar el Ranking");
+// }
+// }

@@ -25,7 +25,8 @@ choices.addEventListener("click", (e) =>{
             points +=1; //se suma un punto 
             localStorage.setItem("points", JSON.stringify(points)); 
         }
-            index++; // tanto si acierta como no se suma uno al índice que recorre las preguntas
+        
+            index++;// tanto si acierta como no se suma uno al índice que recorre las preguntas
             numPregunta++; // igualmente con el contador de preguntas
             document.querySelector ("#progress").innerHTML=`Question ${numPregunta} of ${jsonData.length}`; // enseña el progreso
         if(index < jsonData.length){ //mientras que el indice sea menor que el tamaño del array se recorre el array 
@@ -86,22 +87,12 @@ async function main(){
         writeQuestion(jsonData[index])
         writeAnswers(jsonData[index])
         correct = jsonData[index].correct
+        
     } catch (error) {
         error = alert("Hubo un error");
     }
 }
 main()
-// function tiempoAtras(){
-//     tiemporegresivo = setInterval(() => {
-//     let segundos = 30;
-//     segundos - 1;
-//     let tiempo =document.querySelector("#tiempo")
-//     tiempo.innerHTML=`Tiempo restante: ${segundos}`;
-//     if (segundos === 0){
-//        alert("Se acabó el tiempo")
-//        clearInterval(tiemporegresivo)
-//     }
-// },1000)}
 
 function mostrarRanking(points){
     if(points > 0 & points <=10)
@@ -118,27 +109,3 @@ function mostrarRanking(points){
     ranking.innerHTML=`<br><img src=gifs/tarantino.gif alt=et disfrazado height=150 aling=middle> <h2> Enhorabuena, te gusta más el cine que a Tarantino los pies </h2> `;
 
 }
-
-//  if (!window.localStorage);
-//  try{
-    
-//     if (localStorage.getItem("ranking") === null) {
-//         let guardarRanking = [];
-//         localStorage.setItem("ranking", JSON.stringify(guardarRanking));
-//     } else {
-//         guardarRanking = JSON.parse(localStorage.getItem("ranking")); 
-//     }
-//     for (let i = 0; i < 5; i++) {
-//         const li = document.createElement("li"); 
-//         li.classList.add("nombre"); 
-//         if (arrayList[i]) {
-//             li.innerHTML = `${arrayList[i][0]} - ${arrayList[i][1]}`; 
-//         } else {
-//             li.innerHTML = "Vacio";
-//         }
-
-//  }}
-//  catch(error){ 
-//    error = alert("Hubo un error con el LocalStorage, no se puede cargar el Ranking");
-// }
-// }
