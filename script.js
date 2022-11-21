@@ -91,18 +91,6 @@ async function main(){
     }
 }
 main()
-// function tiempoAtras(){
-//     tiemporegresivo = setInterval(() => {
-//     let segundos = 30;
-//     segundos - 1;
-//     let tiempo =document.querySelector("#tiempo")
-//     tiempo.innerHTML=`Tiempo restante: ${segundos}`;
-//     if (segundos === 0){
-//        alert("Se acabó el tiempo")
-//        clearInterval(tiemporegresivo)
-//     }
-// },1000)}
-
 function mostrarRanking(points){
     if(points > 0 & points <=10)
     ranking.innerHTML=`<br><img src=gifs/stormtrooper.gif alt=stormtrooper StarWars height=150 aling=middle> <h2  > Un Stormtrooper tiene más puntuería que tú </h2> `;
@@ -119,26 +107,3 @@ function mostrarRanking(points){
 
 }
 
-//  if (!window.localStorage);
-//  try{
-    
-//     if (localStorage.getItem("ranking") === null) {
-//         let guardarRanking = [];
-//         localStorage.setItem("ranking", JSON.stringify(guardarRanking));
-//     } else {
-//         guardarRanking = JSON.parse(localStorage.getItem("ranking")); 
-//     }
-//     for (let i = 0; i < 5; i++) {
-//         const li = document.createElement("li"); 
-//         li.classList.add("nombre"); 
-//         if (arrayList[i]) {
-//             li.innerHTML = `${arrayList[i][0]} - ${arrayList[i][1]}`; 
-//         } else {
-//             li.innerHTML = "Vacio";
-//         }
-
-//  }}
-//  catch(error){ 
-//    error = alert("Hubo un error con el LocalStorage, no se puede cargar el Ranking");
-// }
-// }
